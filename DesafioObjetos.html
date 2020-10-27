@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <p>Nome:<input type="text" id="nome"  /></p>
+        <p>sobrenome:<input type="text" id="sobrenome" /></p>
+        <p>Peso:<input type="text" id="peso" /></p>
+        <p>Altura:<input type="text" id="altura"  /></p>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <div class="resultado"></div>
+
+    <script>
+        const form = document.querySelector('#form');
+        form.addEventListener('submit', criaPessoa);
+
+
+        const resultado = document.querySelector('.resultado')
+        const pessoas = [];
+
+        function criaPessoa(evento) {
+            evento.preventDefault();
+            console.log('Chegou')
+
+            const nome = document.querySelector('#nome');
+            const sobrenome = document.querySelector('#sobrenome');
+            const peso = document.querySelector('#peso');
+            const altura = document.querySelector('#altura');
+
+            let pessoa = {
+                nome: nome.value,
+                sobrenome: sobrenome.value,
+                peso: peso.value,
+                altura: altura.value,
+            }
+
+            resultado.innerHTML += `<p>${pessoa.nome} ${pessoa.sobrenome} ${pessoa.peso} ${pessoa.altura}</p>`
+
+            pessoas.push(pessoa)
+            console.log(pessoas)
+        };
+
+        
+
+    </script>
+
+</body>
+</html>
