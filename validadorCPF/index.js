@@ -17,9 +17,11 @@ function cpfIsValid(cpf){
             multiplicador--; 
 
             return ac;
-        }, 0);        
+        }, 0);   
         
-        let verificador = String(11 - (teste % 11));
+        let digito = String(11 - (teste % 11));
+        
+        let verificador = digio > 9 ? 0 : digito;
 
         cpfArray.push(verificador);
     }
