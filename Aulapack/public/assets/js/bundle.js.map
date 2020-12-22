@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://teste/./src/index.js"],"names":["console","log"],"mappings":"AAAAA,QAAQC,IAAI,sBAEZD,QAAQC,IADM","file":"bundle.js","sourcesContent":["console.log('eeeeeeeeeeeeeeiiii')\r\nconst teste = 2;\r\nconsole.log(teste);"],"sourceRoot":""}
