@@ -1,5 +1,7 @@
 exports.middlewareGlobal = (req, res, next) => {
-    res.locals.variacvelLocal = 'variavel local texto';
+    res.locals.errors = req.flash('errorsList');
+    res.locals.success = req.flash('success');
+    res.locals.user = req.session.user;
     next();
 }
 
@@ -7,6 +9,8 @@ exports.checkCsrfError = (err, req, res, next) => {
     if(err){
         return res.render('404');
     }
+
+    next();
 }
 
 exports.csrfMiddleware = (req, res, next) => {
