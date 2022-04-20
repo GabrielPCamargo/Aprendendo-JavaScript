@@ -26,5 +26,7 @@ module.exports = {
     'react/react-in-jsx-scope': 0,
     'react/jsx-props-no-spreading': 0,
     'default-param-last': 0,
+    'react/jsx-no-bind': 0,
+    'react/jsx-no-useless-fragment': 0,
   },
 };
